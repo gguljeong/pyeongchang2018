@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Theme Made By www.w3schools.com - No Copyright -->
+        <title>2018평창동계올림픽대회</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+                position:relative;
+                max-width:1100px;
+                margin:0 auto;
+            }
+            h2 {
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #303030;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+            h4 {
+                font-size: 19px;
+                line-height: 1.375em;
+                color: #303030;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+            .jumbotron {
+                background-color: #0073BA;
+                color: #fff;
+                padding: 100px 25px;
+                font-family: Montserrat, sans-serif;
+            }
+            .container-fluid {
+                padding: 60px 50px;
+            }
+            .bg-grey {
+                background-color: #0073BA;
+            }
+            .logo-small {
+                color: #0073BA;
+                font-size: 50px;
+                margin: 0;
+            }
+            .logo {
+                color: #0073BA;
+                font-size: 200px;
+                margin: 0;
+            }
+            .thumbnail {
+                padding: 0 0 15px 0;
+                border: none;
+                border-radius: 0;
+            }
+            .thumbnail img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 10px;
+            }
+            .carousel-control.right, .carousel-control.left {
+                background-image: none;
+                color: #0073BA;
+            }
+            .carousel-indicators li {
+                border-color: #0073BA;
+            }
+            .carousel-indicators li.active {
+                background-color: #0073BA;
+            }
+            .item h4 {
+                font-size: 19px;
+                line-height: 1.375em;
+                font-weight: 400;
+                font-style: italic;
+                margin: 70px 0;
+            }
+            .item span {
+                font-style: normal;
+            }
+            .panel {
+                border: 1px solid #0073BA;
+                border-radius:0 !important;
+                transition: box-shadow 0.5s;
+            }
+            .panel:hover {
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+            .panel-footer .btn:hover {
+                border: 1px solid #0073BA;
+                background-color: #fff !important;
+                color: #0073BA;
+            }
+            .panel-heading {
+                color: #fff !important;
+                background-color: #0073BA !important;
+                padding: 25px;
+                border-bottom: 1px solid transparent;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            .panel-footer {
+                background-color: white !important;
+            }
+            .panel-footer h3 {
+                font-size: 32px;
+            }
+            .panel-footer h4 {
+                color: #aaa;
+                font-size: 14px;
+            }
+            .panel-footer .btn {
+                margin: 15px 0;
+                background-color: #0073BA;
+                color: #fff;
+            }
+            .navbar {
+                margin-bottom: 0;
+                background-color: white;
+                z-index: 9999;
+                border: 0;
+                font-size: 12px !important;
+                line-height: 1.42857143 !important;
+                letter-spacing: 4px;
+                border-radius: 0;
+                font-family: Montserrat, sans-serif;
+                text-align: right;
+            }
+
+
+            footer .glyphicon {
+                font-size: 20px;
+                margin-bottom: 20px;
+                color: #0073BA;
+            }
+            .slideanim {visibility:hidden;}
+            .slide {
+                animation-name: slide;
+                -webkit-animation-name: slide;
+                animation-duration: 1s;
+                -webkit-animation-duration: 1s;
+                visibility: visible;
+            }
+            @keyframes slide {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+            @-webkit-keyframes slide {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .col-sm-4 {
+                    text-align: center;
+                    margin: 25px 0;
+                    }
+                .btn-lg {
+                    width: 100%;
+                    margin-bottom: 35px;
+                    }
+            }
+            @media screen and (max-width: 480px) {
+                .logo {
+                    font-size: 150px;
+                }
+            }
+
+            /*    추가  */
+             .subnav1{
+                color: #0079C2;
+                margin: 10px;
+                border: none;
+            }
+            .li_class{
+                color: #494949;
+                margin-top: 10px;
+            }
+
+            .carousel{
+                margin-top: 100px;
+                text-align: center;
+            }
+
+            #countdown p {
+                display: inline-block;
+                padding: 0px;
+                margin: 0;
+                color: #C4132F;
+                font-size: 2em;
+                text-align: center;
+            }
+
+            .omega{
+                margin-left: 20px;
+                margin-top: 0;
+            }
+
+            .day1{
+                border-top: #E5E5E5 solid 1px;
+                border-bottom: #E5E5E5 solid 1px;
+                text-align: center;
+                color: #676767;
+                display: inline-block;
+                width: 150px;
+            }
+            .day2{
+                border-top: #E5E5E5 solid 1px;
+                border-bottom: #E5E5E5 solid 1px;
+                background-color: #F2F2F2;
+                text-align: center;
+                color: #676767;
+                display: inline-block;
+                width: 150px;
+            }
+            .title{
+                border-bottom: #F8B21C solid 3px;
+            }
+            .main_visual{
+                position:relative;
+                max-width:980px;
+                margin:0 auto;
+                max-height:342px;
+                overflow:hidden;
+            }
+            .socialmedia{
+                float: left;
+                padding-left: 50px;
+            }
+
+            .main_sns_list{
+                overflow:hidden;
+                margin-left:-25px;
+            }
+            .main_sns_list li{
+                float:left;
+                width:225px;
+                background:#fff;
+                margin-left:25px;
+                list-style: none;
+            }
+            .main_sns_list li a{display:block;}
+            .main_sns_list li a.cont{padding:13px;height:145px;}
+            .main_sns_list li a.cont2 img{width:100%;height:145px;}
+            .main_sns_list li a.more{padding:0;}
+            .main_sns_list li a.more img{width:100%;}
+            .main_sns_list li a dl dt{
+                border-bottom:1px solid #ebebeb;
+                color:#494949;
+                font-size:16px;
+                padding-bottom:7px;
+                font-weight:bold;
+                white-space:nowrap;
+                text-overflow:ellipsis;
+                overflow:hidden;
+                margin-bottom:10px
+            }
+            .main_sns_list li a dl dd{
+                line-height:150%;
+                font-size:13px;
+                color:#494949;
+                word-break:break-all;
+            }
+            .main_sns_list{margin-left:0;}
+
+            .zero{
+                margin: 0;
+                padding: 0;
+                float: left;
+            }
+            .pichover a:hover{
+                background-color: #0073BA;
+
+            }
+
+            .spgal{
+                margin-left: 25px;
+                margin-bottom: 25px;
+                float: left;
+            }
+            .photogal{
+                width: 150px;
+                margin: 3px;
+            }
+
+            .sec3{
+                position: relative;
+                background: url(bg_main_section3.jpg) no-repeat center -30px;
+            }
+            .sec3_in{
+                width: 980px;
+                margin: 0 auto;
+                padding: 100px 0 75px 0;
+                position: relative;
+                z-index: 3px;
+            }
+            .sec3_in h2{float:left;width:243px;padding:23px 0 0 0;}
+            .sec3_in .sec3_list{overflow:hidden;}
+            .sec3_in .sec3_list dt{
+                float:left;
+                width:490px;
+                height:170px;
+                background:url(bg_main_section04_02_min.jpg) no-repeat left top;
+                text-indent:-9999px;
+                overflow:hidden;
+            }
+            .sec3_in .sec3_list dd{float:left;}
+            .sec3_in .sec3_list dd a{
+                display:block;
+                width:490px;
+                height:170px;
+                text-indent:-9999px;
+                overflow:hidden;
+                background:url(bg_main_section04_02_min.jpg) no-repeat -2px top;
+            }
+            .sec3_in .sec3_list dd a#sec3_list01 {
+                background-position: -490px 0;
+            }
+            .sec3_in .sec3_list dd a#sec3_list02 {
+                background-position: 0 -170px;
+            }
+            .sec3_in .sec3_list dd a#sec3_list03 {
+                background-position: -490px -170px;
+            }
+            .sec3_in .sec3_list dd a {
+                display: block;
+                width: 490px;
+                height: 170px;
+                text-indent: -9999px;
+                overflow: hidden;
+                background: url(bg_main_section04_02_min.jpg) no-repeat -2px top;
+            }
+        </style>
+
+    <script>
+        //        date countdown
+        (function (e) {
+            e.fn.countdown = function (t, n) {
+                function i() {
+                    eventDate = Date.parse(r.date) / 1e3;
+                    currentDate = Math.floor(e.now() / 1e3);
+                    if (eventDate <= currentDate) {
+                        n.call(this);
+                        clearInterval(interval)
+                    }
+                    seconds = eventDate - currentDate;
+                    days = Math.floor(seconds / 86400);
+                    seconds -= days * 60 * 60 * 24;
+                    hours = Math.floor(seconds / 3600);
+                    seconds -= hours * 60 * 60;
+                    minutes = Math.floor(seconds / 60);
+                    seconds -= minutes * 60;
+                    days == 1 ? thisEl.find(".timeRefDays").text("일") : thisEl.find(".timeRefDays").text("일");
+                    hours == 1 ? thisEl.find(".timeRefHours").text("시") : thisEl.find(".timeRefHours").text("시");
+                    minutes == 1 ? thisEl.find(".timeRefMinutes").text("분") : thisEl.find(".timeRefMinutes").text("분");
+                    seconds == 1 ? thisEl.find(".timeRefSeconds").text("초") : thisEl.find(".timeRefSeconds").text("초");
+                    if (r["format"] == "on") {
+                        days = String(days).length >= 2 ? days : "0" + days;
+                        hours = String(hours).length >= 2 ? hours : "0" + hours;
+                        minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
+                        seconds = String(seconds).length >= 2 ? seconds : "0" + seconds
+                    }
+                    if (!isNaN(eventDate)) {
+                        thisEl.find(".days").text(days);
+                        thisEl.find(".hours").text(hours);
+                        thisEl.find(".minutes").text(minutes);
+                        thisEl.find(".seconds").text(seconds)
+                    } else {
+                        alert("Invalid date. Example: 30 Tuesday 2013 15:50:00");
+                        clearInterval(interval)
+                    }
+                }
+                var thisEl = e(this);
+                var r = {
+                date: null,
+                format: null
+                };
+                t && e.extend(r, t);
+                i();
+                interval = setInterval(i, 1e3)
+            }
+        })(jQuery);
+        $(document).ready(function () {
+            function e() {
+                var e = new Date;
+                e.setDate(e.getDate() + 60);
+                dd = e.getDate();
+                mm = e.getMonth() + 1;
+                y = e.getFullYear();
+                futureFormattedDate = mm + "/" + dd + "/" + y;
+                return futureFormattedDate
+            }
+            $("#countdown").countdown({
+                date: "9 February 2018 20:18:00", // Change this to your desired date to countdown to
+                format: "on"
+            });
+        });
+    </script>
+
+    </head>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#myPage"><img src="img_logo.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+
+<!--                       동계올림픽 서브네비-->
+                        <li class="subnav1" data-toggle="collapse" data-target="#mySubnav"><strong>동계올림픽</strong>
+                            <div class="collapse navbar-collapse" id="mySubnav">
+                                <ul style="list-style: none;">
+                                    <li><a href="#index2" class="li_class">2018평창</a></li>
+                                    <li><a href="#index3" class="li_class">개최효과</a></li>
+                                    <li><a href="#index4" class="li_class">경기장 시설</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+
+                        <li><a href="#services" style="color: #009641"><strong>동계스포츠</strong></a></li>
+                        <li><a href="#portfolio" style="color: #FAB31E"><strong>개최도시와 문화</strong></a></li>
+                        <li><a href="#socialpage" style="color: #656565"><strong>소셜미디어</strong></a></li>
+                        <li><a href="#contact" style="color: #F90000"><strong>파트너</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Carousel 이미지 슬라이더-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner main_visual" role="listbox">
+                <div class="item active">
+                    <img src="Banner_316.jpg">
+                </div>
+                <div class="item">
+                    <img src="Banner_766.jpg">
+                </div>
+                <div class="item">
+                    <img src="Banner_860.jpg">
+                </div>
+                <div class="item">
+                <img src="Banner_864.jpg">
+                </div>
+            </div>
+            <!--   Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <!--    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <!--    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+
+
+        <!-- 메인첫페이지(디데이, 사진첩) -->
+        <div id="about" class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6" style="text-align: center;">
+                    <h4 class="title"><strong>2018평창동계올림픽대회까지 남은기간</strong></h4>
+                    <!--     Countdown      -->
+                    <div id="countdown">
+                        <p class="days">00</p>
+                        <p class="timeRefDays">일</p>
+                        <img class="omega" src="omega.png"><br/>
+                        <p class="hours">00</p>
+                        <p class="timeRefHours">시</p>
+                        <p class="minutes">00</p>
+                        <p class="timeRefMinutes">분</p>
+                        <p class="seconds">00</p>
+                        <p class="timeRefSeconds">초</p>
+                    </div>
+                    <!--     Countdown      -->
+                    <p>
+                        <span class="day1">2018.2.9~2.25</span>
+                        <span class="day2"><strong>17</strong>일간</span>
+                    </p>
+                </div>
+                <div class="col-sm-6"  style="text-align: center;">
+                    <h4 class="title">포토갤러리 및 영상</h4>
+                    <div id="gallery">
+                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=1&bitm=61192">
+                        <img src="board_61191_15092_thumbs.jpg" class="photogal">
+                        </a>
+                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=2&bitm=61191">
+                        <img src="board_61192_15093_thumbs.jpg" class="photogal">
+                        </a>
+                    </div>
+                    <div id="video">
+                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=251">
+                        <img src="vodpic_251.jpg" class="photogal">
+                        </a>
+                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=244">
+                        <img src="vodpic_244.jpg" class="photogal">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--   동계스포츠-->
+
+        <div class="container-fluid bg-grey">
+            <div class="row">
+                <img style="margin-left:25px" src="tit_main01.png"><br/><br/>
+                <div id="snowsports" class="pichover spgal">
+                    <a href="#" class="pichover zero"><img src="sp11.png"></a>
+                    <a href="#" class="zero"><img src="sp12.png"></a><br/>
+                    <img src="sp10.png" class="zero">
+                    <a href="#" class="zero"><img src="sp13.png"></a><br/>
+                    <a href="#" class="zero"><img src="sp14.png"></a>
+                    <a href="#" class="zero"><img src="sp15.png"></a><br/>
+                    <a href="#" class="zero"><img src="sp16.png"></a>
+                    <a href="#" class="zero"><img src="sp17.png"></a>
+                </div>
+                <div id="icesports" class="pichover spgal">
+                    <a href="#" class="zero"><img src="sp21.png"></a>
+                    <a href="#" class="zero"><img src="sp26.png"></a><br/>
+                    <a href="#" class="zero"><img src="sp23.png"></a>
+                    <a href="#" class="zero"><img src="sp24.png"></a><br/>
+                    <a href="#" class="zero"><img src="sp25.png"></a>
+                </div>
+                <div id="slidingsports" class="pichover spgal">
+                    <a href="#" class="zero"><img src="sp31.png"></a><br/>
+                    <a href="#" class="zero"><img src="sp32.png"></a><br/>
+                    <a href="#" class="zero"><img src="sp33.png"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- 개최도시와 문화 -->
+        <div id="services" class="container-fluid sec3">
+            <!--
+            <img src="city.png" class="zero">
+
+            <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Activities" class="zero"><img src="activities.png"></a>
+            <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Tourist" class="zero"><img src="tourists.png"></a>
+            <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Food" class="zero"><img src="food.png"></a>
+            -->
+            <div class="sec3_in">
+                <dl class="sec3_list">
+                <dt>개최도시와 문화 / 개최도시의 볼거리, 먹거리, 즐길거리, 문화</dt>
+                <dd><a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Activities" id="sec3_list01">놀거리</a></dd>
+                <dd><a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Tourist" id="sec3_list02">볼거리</a></dd>
+                <dd><a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Food" id="sec3_list03">먹거리</a></dd>
+
+                </dl>
+            </div>
+        </div>
+
+        <!-- Container (Portfolio Section) -->
+        <div id="portfolio" class="container-fluid text-center bg-grey">
+        <h2>Portfolio</h2><br>
+        <h4>What we have created</h4>
+        <div class="row text-center slideanim">
+        <div class="col-sm-4">
+        <div class="thumbnail">
+        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Paris</strong></p>
+        <p>Yes, we built Paris</p>
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="thumbnail">
+        <img src="newyork.jpg" alt="New York" width="400" height="300">
+        <p><strong>New York</strong></p>
+        <p>We built New York</p>
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="thumbnail">
+        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+        </div>
+        </div>
+        </div><br>
+
+        <h2>What our customers say</h2>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+        <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+        </div>
+        <div class="item">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+        </div>
+        <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+        </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+        </div>
+        </div>
+
+        <!-- 소셜미디어 -->
+        <div id="socialpage" class="container-fluid">
+            <h2 class="tit_sns" id="section4"><img src="tit_main03.png" alt="Social Media"/></h2>
+            <ul class="main_sns_list">
+            <!-- facebook cont -->
+            <li>
+
+            <a href="https://www.youtube.com/attribution_link?a=_F_H22P1bYI&u=%2Fwatch%3Fv%3Dzb9KM7ZA9ZM%26feature%3Dshare" class="cont" target="_blank" title="facebook new window">
+                <dl>
+                    <dt>#PyeongChang_Hous...</dt>
+                    <dd>#PyeongChang_House welcomes you! Come visit and get a glimpse of #Pyeo...</dd>
+                </dl>
+            </a>
+            <a href="https://www.facebook.com/PyeongChang2018" class="more" target="_blank" title="facebook new window"><img src="facebook.png" alt="Like our page"></a>
+
+            </li>
+            <!-- //facebook cont -->
+
+            <!-- twitter cont -->
+            <li>
+
+            <a href="https://twitter.com/2018PyeongChang/status/711738962247753729" class="cont" target="_blank" title="twitter new window">
+                <dl>
+                    <dt>Come visit and ge...</dt>
+                    <dd>Come visit and get a glimpse of #PyeongChang2018 at the beautiful coas...</dd>
+                </dl>
+            </a>
+            <a href="https://twitter.com/2018PyeongChang" class="more" target="_blank" title="twitter new window"><img src="twitter.png" alt="Follow us"></a>
+
+            </li>
+            <!-- //twitter cont -->
+
+            <!-- youtube cont -->
+            <li>
+
+            <a href="https://www.youtube.com/watch?v=AFM8jUTSTVg" class="cont2" target="_blank" title="youtube  new window"><img src="https://i.ytimg.com/vi/AFM8jUTSTVg/mqdefault.jpg" alt="2018평창의 새로운 홍보대사 ..."/></a>
+            <a href="https://www.youtube.com/user/PyeongChang2018" class="more" target="_blank" title="youtube new window"><img src="youtube.png" alt="Go to our channel"></a>
+
+            </li>
+            <!-- //youtube cont -->
+
+            <!--                        photo more-->
+            <!--
+            <li>
+
+            <a href="http://www.flickr.com/photos/114551048@N03/25531684240" class="cont2" target="_blank" title="flickr new window"><img src="http://farm2.static.flickr.com/1678/25531684240_b6d875de2b_m.jpg" alt="PyeongChang2018 sign..."/></a>
+            <a href="https://www.flickr.com/photos/pyeongchang2018_kr" class="more" target="_blank" title="flickr new window"><img src="morephoto.png" alt="See more photos"></a>
+
+            </li>
+            -->
+
+
+            </ul>
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div id="contact" class="container-fluid bg-grey">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Contact us and we'll get back to you within 24 hours.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+                </div>
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="googleMap" style="height:400px;width:100%;"></div>
+
+        <!-- Add Google Maps -->
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+            function initialize() {
+                var mapProp = {
+                    center:myCenter,
+                    zoom:12,
+                    scrollwheel:false,
+                    draggable:false,
+                    mapTypeId:google.maps.MapTypeId.ROADMAP
+                };
+
+                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+                var marker = new google.maps.Marker({
+                    position:myCenter,
+                });
+
+                marker.setMap(map);
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+        <footer class="container-fluid text-center">
+            <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                });
+
+                $(window).scroll(function() {
+                    $(".slideanim").each(function(){
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+        </script>
+
+    </body>
+</html>
