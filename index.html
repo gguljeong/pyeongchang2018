@@ -338,52 +338,263 @@
                 vertical-align: top;
             }
             //스포츠사진///////
-            .demo-2 {
-                position:relative;
-                width:55px;
-                height:55px;
-                overflow:hidden;
+
+            ul.img-list {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                width: 100px;
+            }
+
+            ul.img-list li {
+                display: inline-block;
+/*                height: 150px;*/
+                margin: 0;
+                position: relative;
+/*                width: 150px;*/
                 float:left;
-                margin-right:20px;
-                background-color:rgba(26,76,110,0.5)
+
             }
-            .demo-2 p,.demo-2 h2 {
-                color:#fff;
-                padding:10px;
-                left:-20px;
-                top:20px;
-                position:relative
+            span.text-content {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 150px;
             }
-            .demo-2 p {
-                font-family:'Lato';
-                font-size:12px;
-                line-height:18px;
-                margin:0
+
+            span.text-content span {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
             }
-            .demo-2 h2 {
-                font-size:20px;
-                line-height:24px;
-                margin:0;
-                font-family:'Lato'
+            span.text-content {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 150px;
+                opacity: 0;
             }
-            .effect img {
-                position:absolute;
-                left:0;
-                bottom:0;
-                cursor:pointer;
-                margin:-12px 0;
-                -webkit-transition:bottom .3s ease-in-out;
-                -moz-transition:bottom .3s ease-in-out;
-                -o-transition:bottom .3s ease-in-out;
-                transition:bottom .3s ease-in-out
+
+            ul.img-list li:hover span.text-content {
+                opacity: 1;
             }
-            .effect img.top:hover {
-                bottom:-96px;
-                padding-top:100px
+            span.text-content {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 150px;
+                opacity: 0;
+                -webkit-transition: opacity 500ms;
+                -moz-transition: opacity 500ms;
+                -o-transition: opacity 500ms;
+                transition: opacity 500ms;
             }
-            h2.zero,p.zero {
-                margin:0;
-                padding:0
+/*            2*1사진 */
+
+            span.text-content2 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 150px;
+            }
+
+            span.text-content2 span {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+            span.text-content2 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 150px;
+                opacity: 0;
+            }
+
+            ul.img-list li:hover span.text-content2 {
+                opacity: 1;
+            }
+            span.text-content2 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 150px;
+                opacity: 0;
+                -webkit-transition: opacity 500ms;
+                -moz-transition: opacity 500ms;
+                -o-transition: opacity 500ms;
+                transition: opacity 500ms;
+            }
+
+
+/*            2*1/2 사진*/
+            span.text-content3 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 150px;
+                width: 150px;
+
+            }
+
+            span.text-content3 span {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+            span.text-content3 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 150px;
+                width: 150px;
+                opacity: 0;
+            }
+
+            ul.img-list li:hover span.text-content3 {
+                opacity: 1;
+            }
+            span.text-content3 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 150px;
+                width: 150px;
+                opacity: 0;
+                -webkit-transition: opacity 500ms;
+                -moz-transition: opacity 500ms;
+                -o-transition: opacity 500ms;
+                transition: opacity 500ms;
+            }
+
+
+/*            1*2사진 */
+            span.text-content4 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 300px;
+            }
+
+            span.text-content4 span {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+            span.text-content4 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 300px;
+                opacity: 0;
+            }
+
+            ul.img-list li:hover span.text-content4 {
+                opacity: 1;
+            }
+            span.text-content4 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 150px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 300px;
+                opacity: 0;
+                -webkit-transition: opacity 500ms;
+                -moz-transition: opacity 500ms;
+                -o-transition: opacity 500ms;
+                transition: opacity 500ms;
+            }
+            /*            2*2사진 */
+            span.text-content5 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 300px;
+            }
+
+            span.text-content5 span {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+            span.text-content5 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 300px;
+                opacity: 0;
+            }
+
+            ul.img-list li:hover span.text-content5 {
+                opacity: 1;
+            }
+            span.text-content5 {
+                background: rgba(0,115,186,0.7);
+                color: white;
+                display: table;
+                height: 300px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 300px;
+                opacity: 0;
+                -webkit-transition: opacity 500ms;
+                -moz-transition: opacity 500ms;
+                -o-transition: opacity 500ms;
+                transition: opacity 500ms;
             }
             /////스포츠사진 끝/////
         </style>
@@ -576,23 +787,93 @@
 
         <!--   동계스포츠-->
 
-        <div class="container-fluid bg-blue" id="wintersports">
+         <div class="container-fluid bg-blue" id="wintersports">
             <div class="row">
                 <img style="margin-left:25px" src="tit_main01.png"><br/><br/>
-                <ul class="demo-2 effect">
+                <div id="snowsports" style="float: left;">
+                <ul class="img-list">
+                  <li>
+                      <img src="sp11.png" width="150" height="150" />
+                      <span class="text-content"><span>알파인스키</span></span>
+                  </li>
+                  <li>
+                      <img src="sp12.png" width="150" height="150" />
+                      <span class="text-content"><span>바이애슬론</span></span>
+                  </li><br/>
                     <li>
-                       <h2 class="zero">알파인스키</h2>
-                       <p class="zero">알파인스키</p>
-                    </li>
-                    <li><img class="top" src="sp12.png" alt=""/></li>
-                </ul>
-                <ul class="demo-2 effect">
+                      <img src="sp10.png" width="150" height="150" />
+                  </li>
                     <li>
-                       <h2 class="zero">알파인스키</h2>
-                       <p class="zero">알파인스키</p>
-                    </li>
-                    <li><img class="top" src="sp12.png" alt=""/></li>
+                      <img src="sp13.png" width="150" height="150" />
+                      <span class="text-content"><span>프리스타일스키</span></span>
+                  </li><br/>
+                    <li>
+                      <img src="sp14.png" width="150" height="150" />
+                      <span class="text-content"><span>크로스컨트리 스키</span></span>
+                  </li>
+                    <li>
+                      <img src="sp15.png" width="150" height="150" />
+                      <span class="text-content"><span>노르딕복합</span></span>
+                  </li><br/>
+                    <li>
+                      <img src="sp16.png" width="150" height="150" />
+                      <span class="text-content"><span>스키점프</span></span>
+                  </li>
+                    <li>
+                      <img src="sp17.png" width="150" height="150" />
+                      <span class="text-content"><span>스노보드</span></span>
+                  </li>
                 </ul>
+                </div>
+
+                <div id="icesports" style="float: left;">
+                <ul class="img-list">
+                  <li>
+                      <img src="sp21.png" width="150" height="300 !important" />
+                      <span class="text-content2"><span>알파인스키</span></span>
+                  </li>
+                    <li>
+                      <img src="sp26.png" width="150" height="300 !important" />
+                      <span class="text-content3"><span>스키점프</span></span>
+                  </li><br/>
+
+
+
+                    <li>
+                      <img src="sp23.png" width="150" height="150" />
+                      <span class="text-content"><span>프리스타일스키</span></span>
+                  </li>
+                    <li>
+                      <img src="sp24.png" width="150" height="150" />
+                      <span class="text-content"><span>크로스컨트리 스키</span></span>
+                  </li><br/>
+                    <li>
+                      <img src="sp25.png" width="300" height="150" />
+                      <span class="text-content4"><span>노르딕복합</span></span>
+                  </li><br/>
+
+
+                </ul>
+                </div>
+
+                <div id="slidingsports" style="float: left;">
+                <ul class="img-list">
+                  <li>
+                      <img src="sp31.png" width="300" height="150" />
+                      <span class="text-content4"><span>알파인스키</span></span>
+                  </li><br/>
+                  <li>
+                      <img src="sp32.png" width="300" height="150" />
+                      <span class="text-content4"><span>바이애슬론</span></span>
+                  </li><br/>
+
+                    <li>
+                      <img src="sp33.png" width="300" height="300" />
+                      <span class="text-content5"><span>프리스타일스키</span></span>
+                  </li><br/>
+
+                </ul>
+                </div>
 
 <!--
                 <div id="snowsports" class="pichover spgal">
@@ -620,6 +901,7 @@
 -->
             </div>
         </div>
+
 
 
 
