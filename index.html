@@ -12,24 +12,9 @@
             body {
                 font: 400 15px Lato, sans-serif;
                 line-height: 1.8;
-                color: #818181;
                 position:relative;
                 max-width:1100px;
                 margin:0 auto;
-            }
-            h2 {
-                font-size: 24px;
-                text-transform: uppercase;
-                color: #303030;
-                font-weight: 600;
-                margin-bottom: 30px;
-            }
-            h4 {
-                font-size: 19px;
-                line-height: 1.375em;
-                color: #303030;
-                font-weight: 400;
-                margin-bottom: 30px;
             }
             .container-fluid {
                 padding: 60px 50px;
@@ -280,7 +265,11 @@
                 position: relative;
                 z-index: 3px;
             }
-            .sec3_in h2{float:left;width:243px;padding:23px 0 0 0;}
+            .sec3_in h2{
+                float:left;
+                width:243px;
+                padding:23px 0 0 0;
+            }
             .sec3_in .sec3_list{overflow:hidden;}
             .sec3_in .sec3_list dt{
                 float:left;
@@ -597,6 +586,16 @@
                 transition: opacity 500ms;
             }
             /////스포츠사진 끝/////
+            /////사진 및 영상/////
+
+            .carimg{
+
+            }
+            .carousel-inner>.item>a>img{
+                display:inherit;
+            }
+
+            /////사진 및 영상 끝/////
         </style>
 
     <script>
@@ -685,9 +684,9 @@
                             <a class="dropdown-toggle subnav1" data-toggle="dropdown" href="#"><strong>동계올림픽</strong>
                                 </a>
                                 <ul class="dropdown-menu" style="list-style: none;">
-                                    <li><a href="#index2" class="li_class">2018평창</a></li>
-                                    <li><a href="#index3" class="li_class">개최효과</a></li>
-                                    <li><a href="#index4" class="li_class">경기장 시설</a></li>
+                                    <li><a href="index2" class="li_class">2018평창</a></li>
+                                    <li><a href="index3" class="li_class">개최효과</a></li>
+                                    <li><a href="index4" class="li_class">경기장 시설</a></li>
                                 </ul>
                         </li>
 
@@ -765,25 +764,43 @@
                 </div>
                 <div class="col-sm-6"  style="text-align: center;">
                     <h4 class="title">포토갤러리 및 영상</h4>
-                    <div id="gallery">
-                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=1&bitm=61192">
-                        <img src="board_61191_15092_thumbs.jpg" class="photogal">
+
+                     <div id="myCarousel1" class="carousel slide" data-ride="carousel" style="margin-top:0">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                            <li data-target="#myCarousel1" data-slide-to="2"></li>
+                            <li data-target="#myCarousel1" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <a href=""><img class="carimg" src="pho1.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href=""><img class="carimg" src="pho2.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href=""><img class="carimg" src="video1.png"></a>
+                            </div>
+                            <div class="item">
+                                <a href=""><img class="carimg" src="video2.png"></a>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#myCarousel1" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
-                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=2&bitm=61191">
-                        <img src="board_61192_15093_thumbs.jpg" class="photogal">
-                        </a>
-                    </div>
-                    <div id="video">
-                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=251">
-                        <img src="vodpic_251.jpg" class="photogal">
-                        </a>
-                        <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=244">
-                        <img src="vodpic_244.jpg" class="photogal">
+                        <a class="carousel-control right" href="#myCarousel1" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
+
 
         <!--   동계스포츠-->
 
