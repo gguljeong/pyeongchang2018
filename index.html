@@ -32,7 +32,7 @@
             .carousel-indicators li.active {
                 background-color: #0073BA;
             }
-            .navbar {
+            .navbar1 {
                 margin-bottom: 0;
                 background-color: white;
                 z-index: 9999;
@@ -43,6 +43,11 @@
                 border-radius: 0;
                 font-family: Montserrat, sans-serif;
                 text-align: right;
+            }
+            .navbar-toggle{
+                background-color: #F6F6F6;
+                border: none;
+                border-radius: 50px;
             }
             footer .glyphicon {
                 font-size: 20px;
@@ -77,7 +82,7 @@
                     -webkit-transform: translateY(0%);
                 }
             }
-/*
+
             @media screen and (max-width: 768px) {
                 .col-sm-4 {
                     text-align: center;
@@ -87,13 +92,19 @@
                     width: 100%;
                     margin-bottom: 35px;
                     }
+                #cityculture{
+                    display: none;
+                }
             }
             @media screen and (max-width: 480px) {
                 .logo {
                     font-size: 150px;
                 }
+                #cityculture{
+                    display: none;
+                }
             }
-*/
+
 
             /*    추가  */
 
@@ -115,6 +126,7 @@
                 border-top-color: #fff;border-bottom-color: #fff;
                 background: transparent !important;
             }
+            .nav
             .dropdown-menu > .active > a,
             .dropdown-menu > .active > a:hover,
             .dropdown-menu > .active > a:focus,
@@ -232,18 +244,13 @@
                 color:#494949;
                 word-break:break-all;
             }
-            .main_sns_list{margin-left:0;}
-
-            .zero{
-                margin: 0;
-                padding: 0;
-                float: left;
+            .main_sns_list{
+                margin-left:0;
             }
             .pichover a:hover{
                 background-color: #0073BA;
 
             }
-
             .spgal{
                 margin-left: 25px;
                 margin-bottom: 25px;
@@ -258,53 +265,12 @@
                 position: relative;
                 background: url(bg_main_section3.jpg) no-repeat center -30px;
             }
-            .sec3_in{
-                width: 980px;
-                margin: 0 auto;
-                padding: 100px 0 75px 0;
+            .sec3 img, .zero img{
                 position: relative;
-                z-index: 3px;
-            }
-            .sec3_in h2{
+                width: 50%;
                 float:left;
-                width:243px;
-                padding:23px 0 0 0;
             }
-            .sec3_in .sec3_list{overflow:hidden;}
-            .sec3_in .sec3_list dt{
-                float:left;
-                width:490px;
-                height:170px;
-                background:url(bg_main_section04_02_min.jpg) no-repeat left top;
-                text-indent:-9999px;
-                overflow:hidden;
-            }
-            .sec3_in .sec3_list dd{float:left;}
-            .sec3_in .sec3_list dd a{
-                display:block;
-                width:490px;
-                height:170px;
-                text-indent:-9999px;
-                overflow:hidden;
-                background:url(bg_main_section04_02_min.jpg) no-repeat -2px top;
-            }
-            .sec3_in .sec3_list dd a#sec3_list01 {
-                background-position: -490px 0;
-            }
-            .sec3_in .sec3_list dd a#sec3_list02 {
-                background-position: 0 -170px;
-            }
-            .sec3_in .sec3_list dd a#sec3_list03 {
-                background-position: -490px -170px;
-            }
-            .sec3_in .sec3_list dd a {
-                display: block;
-                width: 490px;
-                height: 170px;
-                text-indent: -9999px;
-                overflow: hidden;
-                background: url(bg_main_section04_02_min.jpg) no-repeat -2px top;
-            }
+
             .sponsor2{
                 overflow: hidden;
                 padding-bottom: 30px;
@@ -586,16 +552,11 @@
                 transition: opacity 500ms;
             }
             /////스포츠사진 끝/////
-            /////사진 및 영상/////
 
-            .carimg{
-
-            }
             .carousel-inner>.item>a>img{
                 display:inherit;
             }
 
-            /////사진 및 영상 끝/////
         </style>
 
     <script>
@@ -666,7 +627,7 @@
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar1 navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -674,24 +635,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#myPage"><img src="img_logo.png"></a>
+                    <a class="navbar-brand" href="index.html"><img src="img_logo.png"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
 
-<!--                       동계올림픽 서브네비-->
+                    <!--동계올림픽 서브네비-->
                         <li class="dropdown">
                             <a class="dropdown-toggle subnav1" data-toggle="dropdown" href="#"><strong>동계올림픽</strong>
                                 </a>
                                 <ul class="dropdown-menu" style="list-style: none;">
-                                    <li><a href="index2" class="li_class">2018평창</a></li>
-                                    <li><a href="index3" class="li_class">개최효과</a></li>
-                                    <li><a href="index4" class="li_class">경기장 시설</a></li>
+                                    <li><a href="index2.html" class="li_class">2018평창</a></li>
+                                    <li><a href="index3.html" class="li_class">개최효과</a></li>
+                                    <li><a href="index4.html" class="li_class">경기장 시설</a></li>
                                 </ul>
                         </li>
-
-
-                        <li><a href="#wintersports" style="color: #009641"><strong>동계스포츠</strong></a></li>
+                        <li><a href="#wintersports" rel="external" style="color: #009641"><strong>동계스포츠</strong></a></li>
                         <li><a href="#cityculture" style="color: #FAB31E"><strong>개최도시와 문화</strong></a></li>
                         <li><a href="#socialpage" style="color: #656565"><strong>소셜미디어</strong></a></li>
                         <li><a href="#contact" style="color: #F90000"><strong>파트너</strong></a></li>
@@ -735,10 +694,6 @@
             </a>
         </div>
 
-
-
-
-
         <!-- 메인첫페이지(디데이, 사진첩) -->
         <div id="about" class="container-fluid">
             <div class="row">
@@ -764,7 +719,6 @@
                 </div>
                 <div class="col-sm-6"  style="text-align: center;">
                     <h4 class="title">포토갤러리 및 영상</h4>
-
                      <div id="myCarousel1" class="carousel slide" data-ride="carousel" style="margin-top:0">
                         <!-- Carousel indicators -->
                         <ol class="carousel-indicators">
@@ -776,16 +730,16 @@
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <a href=""><img class="carimg" src="pho1.jpg"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=1&bitm=61192"><img class="carimg" src="pho1.jpg"></a>
                             </div>
                             <div class="item">
-                                <a href=""><img class="carimg" src="pho2.jpg"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=2&bitm=61191"><img class="carimg" src="pho2.jpg"></a>
                             </div>
                             <div class="item">
-                                <a href=""><img class="carimg" src="video1.png"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=251"><img class="carimg" src="video1.png"></a>
                             </div>
                             <div class="item">
-                                <a href=""><img class="carimg" src="video2.png"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=244"><img class="carimg" src="video2.png"></a>
                             </div>
                         </div>
                         <!-- Carousel controls -->
@@ -807,140 +761,90 @@
          <div class="container-fluid bg-blue" id="wintersports">
             <div class="row">
                 <img style="margin-left:25px" src="tit_main01.png"><br/><br/>
-                <div id="snowsports" style="float: left;">
-                <ul class="img-list">
-                  <li>
-                      <img src="sp11.png" width="150" height="150" />
-                      <span class="text-content"><span>알파인스키</span></span>
-                  </li>
-                  <li>
-                      <img src="sp12.png" width="150" height="150" />
-                      <span class="text-content"><span>바이애슬론</span></span>
-                  </li><br/>
-                    <li>
-                      <img src="sp10.png" width="150" height="150" />
-                  </li>
-                    <li>
-                      <img src="sp13.png" width="150" height="150" />
-                      <span class="text-content"><span>프리스타일스키</span></span>
-                  </li><br/>
-                    <li>
-                      <img src="sp14.png" width="150" height="150" />
-                      <span class="text-content"><span>크로스컨트리 스키</span></span>
-                  </li>
-                    <li>
-                      <img src="sp15.png" width="150" height="150" />
-                      <span class="text-content"><span>노르딕복합</span></span>
-                  </li><br/>
-                    <li>
-                      <img src="sp16.png" width="150" height="150" />
-                      <span class="text-content"><span>스키점프</span></span>
-                  </li>
-                    <li>
-                      <img src="sp17.png" width="150" height="150" />
-                      <span class="text-content"><span>스노보드</span></span>
-                  </li>
-                </ul>
+                <div id="snowsports" style="float: left; margin-top: 25px;">
+                    <ul class="img-list">
+                      <li>
+                          <img src="sp11.png" width="150" height="150" />
+                          <span class="text-content"><span>알파인스키</span></span>
+                      </li>
+                      <li>
+                          <img src="sp12.png" width="150" height="150" />
+                          <span class="text-content"><span>바이애슬론</span></span>
+                      </li><br/>
+                        <li>
+                          <img src="sp10.png" width="150" height="150" />
+                      </li>
+                        <li>
+                          <img src="sp13.png" width="150" height="150" />
+                          <span class="text-content"><span>프리스타일스키</span></span>
+                      </li><br/>
+                        <li>
+                          <img src="sp14.png" width="150" height="150" />
+                          <span class="text-content"><span>크로스컨트리 스키</span></span>
+                      </li>
+                        <li>
+                          <img src="sp15.png" width="150" height="150" />
+                          <span class="text-content"><span>노르딕복합</span></span>
+                      </li><br/>
+                        <li>
+                          <img src="sp16.png" width="150" height="150" />
+                          <span class="text-content"><span>스키점프</span></span>
+                      </li>
+                        <li>
+                          <img src="sp17.png" width="150" height="150" />
+                          <span class="text-content"><span>스노보드</span></span>
+                      </li>
+                    </ul>
                 </div>
-
-                <div id="icesports" style="float: left;">
-                <ul class="img-list">
-                  <li>
-                      <img src="sp21.png" width="150" height="300 !important" />
-                      <span class="text-content2"><span>알파인스키</span></span>
-                  </li>
-                    <li>
-                      <img src="sp26.png" width="150" height="300 !important" />
-                      <span class="text-content3"><span>스키점프</span></span>
-                  </li><br/>
-
-
-
-                    <li>
-                      <img src="sp23.png" width="150" height="150" />
-                      <span class="text-content"><span>프리스타일스키</span></span>
-                  </li>
-                    <li>
-                      <img src="sp24.png" width="150" height="150" />
-                      <span class="text-content"><span>크로스컨트리 스키</span></span>
-                  </li><br/>
-                    <li>
-                      <img src="sp25.png" width="300" height="150" />
-                      <span class="text-content4"><span>노르딕복합</span></span>
-                  </li><br/>
-
-
-                </ul>
+                <div id="icesports" style="float: left; margin-top: 25px;">
+                    <ul class="img-list">
+                      <li>
+                          <img src="sp21.png" width="150" height="300 !important" />
+                          <span class="text-content2"><span>피겨스케이팅</span></span>
+                      </li>
+                        <li>
+                          <img src="sp26.png" width="150" height="300 !important" />
+                          <span class="text-content3"><span>아이스하키</span></span>
+                      </li><br/>
+                        <li>
+                          <img src="sp23.png" width="150" height="150" />
+                          <span class="text-content"><span>스피드 스케이팅</span></span>
+                      </li>
+                        <li>
+                          <img src="sp24.png" width="150" height="150" />
+                          <span class="text-content"><span>쇼트트랙</span></span>
+                      </li><br/>
+                        <li>
+                          <img src="sp25.png" width="300" height="150" />
+                          <span class="text-content4"><span>컬링</span></span>
+                      </li><br/>
+                    </ul>
                 </div>
-
-                <div id="slidingsports" style="float: left;">
-                <ul class="img-list">
-                  <li>
-                      <img src="sp31.png" width="300" height="150" />
-                      <span class="text-content4"><span>알파인스키</span></span>
-                  </li><br/>
-                  <li>
-                      <img src="sp32.png" width="300" height="150" />
-                      <span class="text-content4"><span>바이애슬론</span></span>
-                  </li><br/>
-
-                    <li>
-                      <img src="sp33.png" width="300" height="300" />
-                      <span class="text-content5"><span>프리스타일스키</span></span>
-                  </li><br/>
-
-                </ul>
+                <div id="slidingsports" style="float: left; margin-top: 25px;">
+                    <ul class="img-list">
+                      <li>
+                          <img src="sp31.png" width="300" height="150" />
+                          <span class="text-content4"><span>봅슬레이</span></span>
+                      </li><br/>
+                      <li>
+                          <img src="sp32.png" width="300" height="150" />
+                          <span class="text-content4"><span>루지</span></span>
+                      </li><br/>
+                        <li>
+                          <img src="sp33.png" width="300" height="300" />
+                          <span class="text-content5"><span>스켈레톤</span></span>
+                      </li><br/>
+                    </ul>
                 </div>
-
-<!--
-                <div id="snowsports" class="pichover spgal">
-                    <a href="#" class="pichover zero"><img src="sp11.png"></a>
-                    <a href="#" class="zero"><img src="sp12.png"></a><br/>
-                    <img src="sp10.png" class="zero">
-                    <a href="#" class="zero"><img src="sp13.png"></a><br/>
-                    <a href="#" class="zero"><img src="sp14.png"></a>
-                    <a href="#" class="zero"><img src="sp15.png"></a><br/>
-                    <a href="#" class="zero"><img src="sp16.png"></a>
-                    <a href="#" class="zero"><img src="sp17.png"></a>
-                </div>
-                <div id="icesports" class="pichover spgal">
-                    <a href="#" class="zero"><img src="sp21.png"></a>
-                    <a href="#" class="zero"><img src="sp26.png"></a><br/>
-                    <a href="#" class="zero"><img src="sp23.png"></a>
-                    <a href="#" class="zero"><img src="sp24.png"></a><br/>
-                    <a href="#" class="zero"><img src="sp25.png"></a>
-                </div>
-                <div id="slidingsports" class="pichover spgal">
-                    <a href="#" class="zero"><img src="sp31.png"></a><br/>
-                    <a href="#" class="zero"><img src="sp32.png"></a><br/>
-                    <a href="#" class="zero"><img src="sp33.png"></a>
-                </div>
--->
             </div>
         </div>
 
-
-
-
-
         <!-- 개최도시와 문화 -->
         <div id="cityculture" class="container-fluid sec3">
-            <!--
             <img src="city.png" class="zero">
-
             <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Activities" class="zero"><img src="activities.png"></a>
             <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Tourist" class="zero"><img src="tourists.png"></a>
             <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Food" class="zero"><img src="food.png"></a>
-            -->
-            <div class="sec3_in">
-                <dl class="sec3_list">
-                <dt>개최도시와 문화 / 개최도시의 볼거리, 먹거리, 즐길거리, 문화</dt>
-                <dd><a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Activities" id="sec3_list01">놀거리</a></dd>
-                <dd><a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Tourist" id="sec3_list02">볼거리</a></dd>
-                <dd><a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Food" id="sec3_list03">먹거리</a></dd>
-
-                </dl>
-            </div>
         </div>
 
         <!-- 소셜미디어 -->
@@ -983,18 +887,6 @@
 
             </li>
             <!-- //youtube cont -->
-
-            <!--                        photo more-->
-            <!--
-            <li>
-
-            <a href="http://www.flickr.com/photos/114551048@N03/25531684240" class="cont2" target="_blank" title="flickr new window"><img src="http://farm2.static.flickr.com/1678/25531684240_b6d875de2b_m.jpg" alt="PyeongChang2018 sign..."/></a>
-            <a href="https://www.flickr.com/photos/pyeongchang2018_kr" class="more" target="_blank" title="flickr new window"><img src="morephoto.png" alt="See more photos"></a>
-
-            </li>
-            -->
-
-
             </ul>
         </div>
 
