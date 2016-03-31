@@ -20,8 +20,8 @@
             .container-fluid {
                 padding: 60px 50px;
             }
-            .bg-blue {
-                background-color: #0073BA;
+            .bg-gray {
+                background-color: #F8F8F8;
             }
             .carousel-control.right, .carousel-control.left {
                 background-image: none;
@@ -44,6 +44,7 @@
                 border-radius: 0;
                 font-family: Montserrat, sans-serif;
                 text-align: right;
+
             }
             .navbar-toggle{
                 background-color: #F6F6F6;
@@ -222,7 +223,33 @@
                 width: 100%;
                 margin-top: 10px;
             }
+            .sub_title{
+                font-size: 18px;
+                border-left: 3px solid #494949;
+                border-right: 3px solid #494949;
+                padding: 0 20px;
+                font-weight: bold;
+                line-height: 150%;
+            }
 
+            .table_list table .second{
+                border-right: 1px solid #e5e5e5;
+            }
+            .table_list table th {
+                border-top: 2px solid #e5e5e5;
+                border-bottom: 2px solid #e5e5e5;
+                padding: 12px 0;
+                font-size: 16px;
+                font-family: ngb;
+            }
+            th {
+                font-weight: bold;
+            }
+            user agent stylesheet
+            td, th {
+                display: table-cell;
+                vertical-align: inherit;
+            }
         </style>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -262,12 +289,61 @@
         <div class="container-fluid" >
             <div style="margin-top: 7em;">
                 <h2 class="tit">
-                    <span>개최효과</span>
+                    <span>경기장 시설</span>
                 </h2>
                 <div class="mainimg">
                     <img src="index3.png">
                 </div>
             </div>
+        </div>
+
+        <div class="container-fluid">
+            <div>
+                <h3><span class="sub_title">수용능력</span></h3>
+            </div>
+            <img src="img_facility04_02.png">
+        </div>
+
+        <div class="container-fluid bg-gray">
+            <div>
+                <h3><span class="sub_title">경기종목</span></h3>
+            </div>
+            <img src="img_facility06_03.png">
+        </div>
+
+        <div class="container-fluid">
+            <div>
+                <h3><span class="sub_title">시설규모</span></h3>
+            </div>
+            <div class="table_list">
+                <table>
+                    <caption class="hide">
+                        <strong>시설규모 테이블</strong>
+                        <p>알펜시아 바이애슬론 센터의 시설규모를 각 종목별 길이, 코스폭, 표고차, 가격장으로 나타내는 표입니다.</p>
+                    </caption>
+                    <colgroup>
+                        <col style="width:24%" />
+                        <col style="width:24%" />
+                        <col style="width:16%" />
+                        <col style="width:16%" />
+                        <col style="width:16%" />
+                    </colgroup>
+                    <tr>
+                        <th scope="col" class="second">종목</th>
+                        <th scope="col">길이</th>
+                        <th scope="col">코스폭</th>
+                        <th scope="col">표고차</th>
+                        <th scope="col">사격장</th>
+                    </tr>
+                    <tr>
+                        <td class="first">바이애슬론</td>
+                        <td>4km / 3.3km / 3km / 2.5km / 2km / 1.5km</td>
+                        <td>8m</td>
+                        <td>47m(749m~796m)</td>
+                        <td>82.5 × 50m</td>
+                    </tr>
+                </table>
+
         </div>
 
 
