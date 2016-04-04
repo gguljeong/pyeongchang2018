@@ -6,565 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <style>
-            body {
-                font: 400 15px Lato, sans-serif;
-                line-height: 1.8;
-                position:relative;
-                max-width:1100px;
-                margin:0 auto;
-            }
-            .container-fluid {
-                padding: 60px 50px;
-            }
-            .bg-blue {
-                background-color: #0073BA;
-            }
-            .carousel-control.right, .carousel-control.left {
-                background-image: none;
-                color: #0073BA;
-            }
-            .carousel-indicators li {
-                border-color: #0073BA;
-            }
-            .carousel-indicators li.active {
-                background-color: #0073BA;
-            }
-            .navbar1 {
-                margin-bottom: 0;
-                background-color: white;
-                z-index: 9999;
-                border: 0;
-                font-size: 12px !important;
-                line-height: 1.42857143 !important;
-                letter-spacing: 4px;
-                border-radius: 0;
-                font-family: Montserrat, sans-serif;
-                text-align: right;
-            }
-            .navbar-toggle{
-                background-color: #F6F6F6;
-                border: none;
-                border-radius: 50px;
-            }
-            footer .glyphicon {
-                font-size: 20px;
-                margin-bottom: 20px;
-                color: #0073BA;
-            }
-            .slideanim {visibility:hidden;}
-            .slide {
-                animation-name: slide;
-                -webkit-animation-name: slide;
-                animation-duration: 1s;
-                -webkit-animation-duration: 1s;
-                visibility: visible;
-            }
-            @keyframes slide {
-                0% {
-                    opacity: 0;
-                    -webkit-transform: translateY(70%);
-                }
-                100% {
-                    opacity: 1;
-                    -webkit-transform: translateY(0%);
-                }
-            }
-            @-webkit-keyframes slide {
-                0% {
-                    opacity: 0;
-                    -webkit-transform: translateY(70%);
-                }
-                100% {
-                    opacity: 1;
-                    -webkit-transform: translateY(0%);
-                }
-            }
-
-            @media screen and (max-width: 768px) {
-                .col-sm-4 {
-                    text-align: center;
-                    margin: 25px 0;
-                    }
-                .btn-lg {
-                    width: 100%;
-                    margin-bottom: 35px;
-                    }
-                #cityculture img{
-                    float: none;
-                    width: 60%;
-                    display:block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
-            }
-            @media screen and (max-width: 480px) {
-                .logo {
-                    font-size: 150px;
-                }
-                #cityculture img{
-                    float: none;
-                    width: 60%;
-                }
-            }
-
-
-            /*    추가  */
-
-             .navbar-default .navbar-nav > .active,
-             .navbar-default .navbar-nav > .active > a,
-             .navbar-default .navbar-nav > .active > a:hover,
-             .navbar-default .navbar-nav > .active > a:focus {
-                  background: #FFF;
-             }
-            .nav.nav-tabs > li.dropdown.active.open > a,
-            .nav.nav-tabs > li.dropdown.active.open > ul.dropdown-menu a:hover,
-            .nav.nav-tabs > li.dropdown.open > a,
-            .nav.nav-tabs > li.dropdown.open > ul.dropdown-menu a:hover
-            {
-              background-color: #fff;
-              border-color: #fff;
-            }
-            .nav.nav-tabs > li.dropdown.active.open > a span.caret {
-                border-top-color: #fff;border-bottom-color: #fff;
-                background: transparent !important;
-            }
-            .nav
-            .dropdown-menu > .active > a,
-            .dropdown-menu > .active > a:hover,
-            .dropdown-menu > .active > a:focus,
-            .dropdown-toggle:active, .open .dropdown-toggle,
-            .dropdown-menu > li > a:hover,
-            .dropdown-menu > li > a:focus,
-            .dropdown-submenu:hover > a,
-            .dropdown-submenu:focus > a
-            {
-                background: transparent !important;
-
-            }
-
-            .dropdown-menu{
-                background: #fff !important;
-                border: none;
-                box-shadow: none;
-            }
-
-
-             .subnav1{
-                color: #0079C2 !important;
-                border: none;
-            }
-            .li_class{
-                color: #494949;
-                text-align: right;
-                padding: 0;
-                margin: 0;
-                border: none;
-            }
-
-            .carousel{
-                margin-top: 100px;
-                text-align: center;
-            }
-
-            #countdown p {
-                display: inline-block;
-                padding: 0px;
-                margin: 0;
-                color: #C4132F;
-                font-size: 2em;
-                text-align: center;
-            }
-
-            .omega{
-                margin-left: 10px;
-                margin-bottom: 15px;
-                margin-top: 0;
-            }
-
-            .day1{
-                border-top: #E5E5E5 solid 1px;
-                border-bottom: #E5E5E5 solid 1px;
-                text-align: center;
-                color: #676767;
-                display: inline-block;
-                width: 150px;
-            }
-            .day2{
-                border-top: #E5E5E5 solid 1px;
-                border-bottom: #E5E5E5 solid 1px;
-                background-color: #F2F2F2;
-                text-align: center;
-                color: #676767;
-                display: inline-block;
-                width: 150px;
-            }
-            .title{
-                border-bottom: #F8B21C solid 3px;
-            }
-            .main_visual{
-                position:relative;
-                max-width:980px;
-                margin:0 auto;
-                max-height:342px;
-                overflow:hidden;
-            }
-            .socialmedia{
-                float: left;
-                padding-left: 50px;
-            }
-
-            .main_sns_list{
-                overflow:hidden;
-                margin-left:-25px;
-            }
-            .main_sns_list li{
-                float:left;
-                width:225px;
-                background:#fff;
-                margin-left:25px;
-                list-style: none;
-            }
-            .main_sns_list li a{display:block;}
-            .main_sns_list li a.cont{padding:13px;height:145px;}
-            .main_sns_list li a.cont2 img{width:100%;height:145px;}
-            .main_sns_list li a.more{padding:0;}
-            .main_sns_list li a.more img{width:100%;}
-            .main_sns_list li a dl dt{
-                border-bottom:1px solid #ebebeb;
-                color:#494949;
-                font-size:16px;
-                padding-bottom:7px;
-                font-weight:bold;
-                white-space:nowrap;
-                text-overflow:ellipsis;
-                overflow:hidden;
-                margin-bottom:10px
-            }
-            .main_sns_list li a dl dd{
-                line-height:150%;
-                font-size:13px;
-                color:#494949;
-                word-break:break-all;
-            }
-            .main_sns_list{
-                margin-left:0;
-            }
-            .pichover a:hover{
-                background-color: #0073BA;
-
-            }
-            .spgal{
-                margin-left: 25px;
-                margin-bottom: 25px;
-                float: left;
-            }
-            .photogal{
-                width: 150px;
-                margin: 3px;
-            }
-
-            .sec3{
-                position: relative;
-                background: url(bg_main_section3.jpg) no-repeat center -30px;
-            }
-            .sec3 img, .zero img{
-                position: relative;
-                width: 50%;
-                float:left;
-            }
-
-            .sponsor2{
-                overflow: hidden;
-                padding-bottom: 30px;
-            }
-            .sponsor2 dt{
-                border-bottom: 1px solid #EBEBEB;
-                font-size: 13px;
-                padding-bottom: 7px;
-            }
-            .sponsor2 dd{
-                float: left;
-                width: 135px;
-                height: 45px;
-                padding: 10px 0 10px 0;
-                text-align: center;
-            }
-            .sponsor2 dd img{
-                width: 100%;
-                max-width: 135px;
-                vertical-align: top;
-            }
-            //스포츠사진///////
-
-            ul.img-list {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                text-align: center;
-                width: 100px;
-            }
-
-            ul.img-list li {
-                display: inline-block;
-/*                height: 150px;*/
-                margin: 0;
-                position: relative;
-/*                width: 150px;*/
-                float:left;
-
-            }
-            span.text-content {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 150px;
-            }
-
-            span.text-content span {
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-            }
-            span.text-content {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 150px;
-                opacity: 0;
-            }
-
-            ul.img-list li:hover span.text-content {
-                opacity: 1;
-            }
-            span.text-content {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 150px;
-                opacity: 0;
-                -webkit-transition: opacity 500ms;
-                -moz-transition: opacity 500ms;
-                -o-transition: opacity 500ms;
-                transition: opacity 500ms;
-            }
-/*            2*1사진 */
-
-            span.text-content2 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 300px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 150px;
-            }
-
-            span.text-content2 span {
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-            }
-            span.text-content2 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 300px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 150px;
-                opacity: 0;
-            }
-
-            ul.img-list li:hover span.text-content2 {
-                opacity: 1;
-            }
-            span.text-content2 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 300px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 150px;
-                opacity: 0;
-                -webkit-transition: opacity 500ms;
-                -moz-transition: opacity 500ms;
-                -o-transition: opacity 500ms;
-                transition: opacity 500ms;
-            }
-
-
-/*            2*1/2 사진*/
-            span.text-content3 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 150px;
-                width: 150px;
-
-            }
-
-            span.text-content3 span {
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-            }
-            span.text-content3 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 150px;
-                width: 150px;
-                opacity: 0;
-            }
-
-            ul.img-list li:hover span.text-content3 {
-                opacity: 1;
-            }
-            span.text-content3 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 150px;
-                width: 150px;
-                opacity: 0;
-                -webkit-transition: opacity 500ms;
-                -moz-transition: opacity 500ms;
-                -o-transition: opacity 500ms;
-                transition: opacity 500ms;
-            }
-
-
-/*            1*2사진 */
-            span.text-content4 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 300px;
-            }
-
-            span.text-content4 span {
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-            }
-            span.text-content4 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 300px;
-                opacity: 0;
-            }
-
-            ul.img-list li:hover span.text-content4 {
-                opacity: 1;
-            }
-            span.text-content4 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 150px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 300px;
-                opacity: 0;
-                -webkit-transition: opacity 500ms;
-                -moz-transition: opacity 500ms;
-                -o-transition: opacity 500ms;
-                transition: opacity 500ms;
-            }
-            /*            2*2사진 */
-            span.text-content5 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 300px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 300px;
-            }
-
-            span.text-content5 span {
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-            }
-            span.text-content5 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 300px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 300px;
-                opacity: 0;
-            }
-
-            ul.img-list li:hover span.text-content5 {
-                opacity: 1;
-            }
-            span.text-content5 {
-                background: rgba(0,115,186,0.7);
-                color: white;
-                display: table;
-                height: 300px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 300px;
-                opacity: 0;
-                -webkit-transition: opacity 500ms;
-                -moz-transition: opacity 500ms;
-                -o-transition: opacity 500ms;
-                transition: opacity 500ms;
-            }
-            /////스포츠사진 끝/////
-
-            .carousel-inner>.item>a>img{
-                display:inherit;
-            }
-
-        </style>
-
     <script>
         //        date countdown
         (function (e) {
@@ -641,7 +85,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img_logo.png"></a>
+                    <a class="navbar-brand" href="index.html"><img src="img/img_logo.png"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -677,16 +121,16 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner main_visual" role="listbox">
                 <div class="item active">
-                    <img src="Banner_316.jpg">
+                    <img src="img/Banner_316.jpg">
                 </div>
                 <div class="item">
-                    <img src="Banner_766.jpg">
+                    <img src="img/Banner_766.jpg">
                 </div>
                 <div class="item">
-                    <img src="Banner_860.jpg">
+                    <img src="img/Banner_860.jpg">
                 </div>
                 <div class="item">
-                <img src="Banner_864.jpg">
+                <img src="img/Banner_864.jpg">
                 </div>
             </div>
             <!--   Left and right controls -->
@@ -709,7 +153,7 @@
                     <div id="countdown">
                         <p class="days">00</p>
                         <p class="timeRefDays">일</p>
-                        <img class="omega" src="omega.png"><br/>
+                        <img class="omega" src="img/omega.png"><br/>
                         <p class="hours">00</p>
                         <p class="timeRefHours">시</p>
                         <p class="minutes">00</p>
@@ -736,16 +180,16 @@
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=1&bitm=61192"><img class="carimg" src="pho1.jpg"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=1&bitm=61192"><img class="carimg" src="img/pho1.jpg"></a>
                             </div>
                             <div class="item">
-                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=2&bitm=61191"><img class="carimg" src="pho2.jpg"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/photo_list.asp?hb_BoardManager_ID=BDFFFF15&plp=2&bitm=61191"><img class="carimg" src="img/pho2.jpg"></a>
                             </div>
                             <div class="item">
-                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=251"><img class="carimg" src="video1.png"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=251"><img class="carimg" src="img/video1.png"></a>
                             </div>
                             <div class="item">
-                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=244"><img class="carimg" src="video2.png"></a>
+                                <a href="http://www.pyeongchang2018.com/horizon/kor/media/promotion_list.asp?hb_Manager_PK=VDKOR001&hb_VodItem_PK=244"><img class="carimg" src="img/video2.png"></a>
                             </div>
                         </div>
                         <!-- Carousel controls -->
@@ -766,38 +210,38 @@
 
          <div class="container-fluid bg-blue" id="wintersports">
             <div class="row">
-                <img style="margin-left:25px" src="tit_main01.png"><br/><br/>
+                <img style="margin-left:25px" src="img/tit_main01.png"><br/><br/>
                 <div id="snowsports" style="float: left; margin-top: 25px;">
                     <ul class="img-list">
                       <li>
-                          <img src="sp11.png" width="150" height="150" />
+                          <img src="img/sp11.png" width="150" height="150" />
                           <span class="text-content"><span>알파인스키</span></span>
                       </li>
                       <li>
-                          <img src="sp12.png" width="150" height="150" />
+                          <img src="img/sp12.png" width="150" height="150" />
                           <span class="text-content"><span>바이애슬론</span></span>
                       </li><br/>
                         <li>
-                          <img src="sp10.png" width="150" height="150" />
+                          <img src="img/sp10.png" width="150" height="150" />
                       </li>
                         <li>
-                          <img src="sp13.png" width="150" height="150" />
+                          <img src="img/sp13.png" width="150" height="150" />
                           <span class="text-content"><span>프리스타일스키</span></span>
                       </li><br/>
                         <li>
-                          <img src="sp14.png" width="150" height="150" />
+                          <img src="img/sp14.png" width="150" height="150" />
                           <span class="text-content"><span>크로스컨트리 스키</span></span>
                       </li>
                         <li>
-                          <img src="sp15.png" width="150" height="150" />
+                          <img src="img/sp15.png" width="150" height="150" />
                           <span class="text-content"><span>노르딕복합</span></span>
                       </li><br/>
                         <li>
-                          <img src="sp16.png" width="150" height="150" />
+                          <img src="img/sp16.png" width="150" height="150" />
                           <span class="text-content"><span>스키점프</span></span>
                       </li>
                         <li>
-                          <img src="sp17.png" width="150" height="150" />
+                          <img src="img/sp17.png" width="150" height="150" />
                           <span class="text-content"><span>스노보드</span></span>
                       </li>
                     </ul>
@@ -805,23 +249,23 @@
                 <div id="icesports" style="float: left; margin-top: 25px;">
                     <ul class="img-list">
                       <li>
-                          <img src="sp21.png" width="150" height="300 !important" />
+                          <img src="img/sp21.png" width="150" height="300 !important" />
                           <span class="text-content2"><span>피겨스케이팅</span></span>
                       </li>
                         <li>
-                          <img src="sp26.png" width="150" height="300 !important" />
+                          <img src="img/sp26.png" width="150" height="300 !important" />
                           <span class="text-content3"><span>아이스하키</span></span>
                       </li><br/>
                         <li>
-                          <img src="sp23.png" width="150" height="150" />
+                          <img src="img/sp23.png" width="150" height="150" />
                           <span class="text-content"><span>스피드 스케이팅</span></span>
                       </li>
                         <li>
-                          <img src="sp24.png" width="150" height="150" />
+                          <img src="img/sp24.png" width="150" height="150" />
                           <span class="text-content"><span>쇼트트랙</span></span>
                       </li><br/>
                         <li>
-                          <img src="sp25.png" width="300" height="150" />
+                          <img src="img/sp25.png" width="300" height="150" />
                           <span class="text-content4"><span>컬링</span></span>
                       </li><br/>
                     </ul>
@@ -829,15 +273,15 @@
                 <div id="slidingsports" style="float: left; margin-top: 25px;">
                     <ul class="img-list">
                       <li>
-                          <img src="sp31.png" width="300" height="150" />
+                          <img src="img/sp31.png" width="300" height="150" />
                           <span class="text-content4"><span>봅슬레이</span></span>
                       </li><br/>
                       <li>
-                          <img src="sp32.png" width="300" height="150" />
+                          <img src="img/sp32.png" width="300" height="150" />
                           <span class="text-content4"><span>루지</span></span>
                       </li><br/>
                         <li>
-                          <img src="sp33.png" width="300" height="300" />
+                          <img src="img/sp33.png" width="300" height="300" />
                           <span class="text-content5"><span>스켈레톤</span></span>
                       </li><br/>
                     </ul>
@@ -848,16 +292,16 @@
         <!-- 개최도시와 문화 -->
         <div id="cityculture" class="container-fluid sec3">
             <div style="margin-top: 50px; margin-bottom: 50px">
-                <img src="city.png" class="zero">
-                <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Activities" class="zero"><img src="activities.png"></a>
-                <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Tourist" class="zero"><img src="tourists.png"></a>
-                <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Food" class="zero"><img src="food.png"></a>
+                <img src="img/bg_main_section04_02_min_01.jpg" class="zero">
+                <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Activities" class="zero"><img src="img/bg_main_section04_02_min_02.jpg"></a>
+                <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Tourist" class="zero"><img src="img/bg_main_section04_02_min_03.jpg"></a>
+                <a href="http://www.pyeongchang2018.com/horizon/kor/culture/pyeongchang_list.asp?hb_BoardManager_ID=BDEEAA16&hb_category=Food" class="zero"><img src="img/bg_main_section04_02_min_04.jpg"></a>
             </div>
         </div>
 
         <!-- 소셜미디어 -->
         <div id="socialpage" class="container-fluid">
-            <h2 class="tit_sns" id="section4"><img src="tit_main03.png" alt="Social Media"/></h2>
+            <h2 class="tit_sns" id="section4"><img src="img/tit_main03.png" alt="Social Media"/></h2>
             <ul class="main_sns_list">
             <!-- facebook cont -->
             <li>
@@ -868,7 +312,7 @@
                     <dd>#PyeongChang_House welcomes you! Come visit and get a glimpse of #Pyeo...</dd>
                 </dl>
             </a>
-            <a href="https://www.facebook.com/PyeongChang2018" class="more" target="_blank" title="facebook new window"><img src="facebook.png" alt="Like our page"></a>
+            <a href="https://www.facebook.com/PyeongChang2018" class="more" target="_blank" title="facebook new window"><img src="img/facebook.png" alt="Like our page"></a>
 
             </li>
             <!-- //facebook cont -->
@@ -882,7 +326,7 @@
                     <dd>Come visit and get a glimpse of #PyeongChang2018 at the beautiful coas...</dd>
                 </dl>
             </a>
-            <a href="https://twitter.com/2018PyeongChang" class="more" target="_blank" title="twitter new window"><img src="twitter.png" alt="Follow us"></a>
+            <a href="https://twitter.com/2018PyeongChang" class="more" target="_blank" title="twitter new window"><img src="img/twitter.png" alt="Follow us"></a>
 
             </li>
             <!-- //twitter cont -->
@@ -891,7 +335,7 @@
             <li>
 
             <a href="https://www.youtube.com/watch?v=AFM8jUTSTVg" class="cont2" target="_blank" title="youtube  new window"><img src="https://i.ytimg.com/vi/AFM8jUTSTVg/mqdefault.jpg" alt="2018평창의 새로운 홍보대사 ..."/></a>
-            <a href="https://www.youtube.com/user/PyeongChang2018" class="more" target="_blank" title="youtube new window"><img src="youtube.png" alt="Go to our channel"></a>
+            <a href="https://www.youtube.com/user/PyeongChang2018" class="more" target="_blank" title="youtube new window"><img src="img/youtube.png" alt="Go to our channel"></a>
 
             </li>
             <!-- //youtube cont -->
